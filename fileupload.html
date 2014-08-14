@@ -1,0 +1,25 @@
+<head>
+  <title>Meteor Rocks</title>
+</head>
+
+<body>
+  <div id="outer">
+    {{> fileUpload}}
+  </div>
+</body>
+
+<template name="fileUpload">
+  {{#if connecting }}
+    <div class='connection' style='color:red'> Meteor is disconnected </div>
+    <br/>
+  {{/if}}
+  <div class="fileUpload">
+    <label for="file">Filename:</label>
+    <input type="file" name="file" id="file"><br>
+    <br/>
+    <button> Upload File </button>
+  </div>
+
+</template>
+
+
